@@ -74,6 +74,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f688ded1dca9192498b1e8325a674f5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  time_of_move: 1
+  self: {fileID: 50737947773372640}
 --- !u!114 &114838286179977624
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -86,10 +88,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shoot_timer: 2
-  time_of_move: 1
   projectile: {fileID: 50996422999526366, guid: 5f9248e8c44d23c4ebd1ece1b4f223b7,
     type: 2}
-  self: {fileID: 50737947773372640}
 --- !u!212 &212230289612277878
 SpriteRenderer:
   m_ObjectHideFlags: 1
