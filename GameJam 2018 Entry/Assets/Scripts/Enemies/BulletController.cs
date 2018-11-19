@@ -3,6 +3,15 @@
 public class BulletController : MonoBehaviour {
 
     private int bounces = 0;
+    private float timeAlive = 0;
+
+    private void Update()
+    {
+        if (timeAlive > 1)
+            Destroy(gameObject);
+
+        timeAlive += Time.deltaTime;
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

@@ -1,10 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System;
 using UnityEngine;
 
 public class MazeMaker : MonoBehaviour {
 
     public GameObject wall;
+    public GameObject shootingEnemy;
+    public int enemyCount;
     private MazeGenerator mazeGenerator;
 
     // Maze is created on Awake 
@@ -27,6 +28,17 @@ public class MazeMaker : MonoBehaviour {
             }
         }
 
-    }
+        // Need to add enemies into maze 
+        for(int i = 0; i < enemyCount; i++)
+        {
+            int roomIndex = (int) Math.Floor( (double) UnityEngine.Random.Range(0, MazeGenerator.roomCoords.Capacity) );
 
+            // Get x and y in random square of the room 
+            int x = (int) UnityEngine.Random.Range(0, MazeGenerator.roomCoords[0][2]);
+            int y = (int) UnityEngine.Random.Range(0, MazeGenerator.roomCoords[0][2]);
+
+            Instantiate(shootingEnemy, new Vector3(MazeGenerator.roomCoords[roomIndex][0] + 0.5f + x,
+                                                   MazeGenerator.roomCoords[roomIndex][1] + 0.5f + y), shootingEnemy.transform.rotation );  
+        }
+    }
 }

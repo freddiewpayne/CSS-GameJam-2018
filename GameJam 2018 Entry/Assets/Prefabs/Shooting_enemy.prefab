@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 50737947773372640}
   - component: {fileID: 114814984221268290}
   - component: {fileID: 58987088383045058}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Shooting_enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -37,13 +37,13 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1023146524696856}
-  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: -1.59, y: 1.617, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0.23615974, w: 0.97171426}
+  m_LocalPosition: {x: -5.45, y: 1.617, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -180, y: 0, z: 1620}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 27.32}
 --- !u!50 &50737947773372640
 Rigidbody2D:
   serializedVersion: 4
@@ -104,8 +104,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shoot_timer: 2
-  projectile: {fileID: 50996422999526366, guid: 5f9248e8c44d23c4ebd1ece1b4f223b7,
-    type: 2}
+  projectile: {fileID: 1927756287457374, guid: 5f9248e8c44d23c4ebd1ece1b4f223b7, type: 2}
 --- !u!212 &212230289612277878
 SpriteRenderer:
   m_ObjectHideFlags: 1

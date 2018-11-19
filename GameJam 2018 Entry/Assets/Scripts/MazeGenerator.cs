@@ -18,6 +18,8 @@ class MazeGenerator
     private static bool endDone = false;
     private static int firstMove = -1;
 
+    public static List<int[]> roomCoords;
+
     // The actual maze
     public static char[,] maze = new char[mazeSize + 1, mazeSize + 1];
 
@@ -29,6 +31,7 @@ class MazeGenerator
 
     public MazeGenerator()
     {
+        roomCoords = new List<int[]>();
         giveMaze();
     }
 
@@ -60,11 +63,15 @@ class MazeGenerator
             placeY = (System.Convert.ToInt32(Math.Floor((double)((mazeSize - rand - 1) * (ran.Next(0, 100) / (double) 100)))) / 2) * 2 + 3;
         }
         while (colliding(placeX, placeY, rand));
+
+        int[] temp = new int[3] { placeX, placeY, rand };
+        roomCoords.Add( temp );
+
         for (int i = placeX; i <= placeX + rand - 1; i++)
         {
             for (int j = placeY; j <= placeY + rand - 1; j++)
             {
-                maze[i, j] = ' ';
+                maze[i, j] = 'k';
             }
         }
 
@@ -119,7 +126,7 @@ class MazeGenerator
         {
             for (int j = placeY; j <= endys; j++)
             {
-                if (maze[i, j] == ' ')
+                if (maze[i, j] == 'k')
                 {
                     return true;
                 }
