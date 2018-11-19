@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Microsoft.VisualBasic;
 
-static class Module1
+static class MazeGenerator
 {
     private static int inp = 20;
     private static int mazeSize = inp;
@@ -19,20 +19,14 @@ static class Module1
     private static bool endDone = false;
     private static int firstMove = -1;
 
-    private static char[,] maze = new char[mazeSize + 1, mazeSize + 1];
+    // The actual maze
+    public static char[,] maze = new char[mazeSize + 1, mazeSize + 1];
+
     private static char[,] maze2 = new char[mazeSize + 1, mazeSize + 1];
     private static int split = 0;
 
     private static int strtX = 1;
     private static int strtY = 1;
-
-    public static void Main()
-    {
-        giveMaze();
-        displayMaze();
-        mazeLook();
-        Console.ReadLine();
-    }
 
     public static void giveMaze()
     {
@@ -47,99 +41,6 @@ static class Module1
         maze[strtX, strtY] = '-';
         genMaze(strtX, strtY, maze, inp, past, strtX, strtY);  // generates maze
         maze[strtX, strtY] = ' ';
-    }
-
-    public static void mazeLook()
-    {
-        for (int x = 0; x <= mazeSize; x++)
-        {
-            for (int y = 0; y <= mazeSize; y++)
-            {
-                if (maze[x, y] == ' ')
-                    maze[x, y] = ' ';
-                else
-                    maze[x, y] = 'X';
-            }
-        }
-
-
-        for (int x = 0; x <= mazeSize; x++)
-        {
-            for (int y = 0; y <= mazeSize; y++)
-            {
-                if (x != 0 & x != mazeSize)
-                {
-                    if (maze[x, y] == 'X' & maze[x + 1, y] == 'X' & maze[x - 1, y] == 'X')
-                    {
-                        maze2[x, y] = '│';
-                        if (y != 0)
-                        {
-                            if (maze[x, y - 1] == 'X')
-                                maze2[x, y] = '┤';
-                        }
-                        if (y != mazeSize)
-                        {
-                            if (maze[x, y + 1] == 'X')
-                                maze2[x, y] = '├';
-                        }
-                    }
-                }
-
-
-                if (y != 0 & y != mazeSize)
-                {
-                    if (maze[x, y] == 'X' & maze[x, y + 1] == 'X' & maze[x, y - 1] == 'X')
-                    {
-                        maze2[x, y] = '─';
-                        if (x != mazeSize)
-                        {
-                            if (maze[x + 1, y] == 'X')
-                                maze2[x, y] = '┬';
-                        }
-                        if (x != 0)
-                        {
-                            if (maze[x - 1, y] == 'X')
-                                maze2[x, y] = '┴';
-                            if (x != mazeSize)
-                            {
-                                if (maze[x - 1, y] == 'X' & maze[x + 1, y] == 'X')
-                                    maze2[x, y] = '┼';
-                            }
-                        }
-                    }
-                }
-
-                if (x != mazeSize & y != mazeSize & x != 0 & y != 0)
-                {
-                    if (maze[x, y] == 'X' & maze[x, y + 1] == 'X' & maze[x + 1, y] == 'X' & maze[x - 1, y] == ' ' & maze[x, y - 1] == ' ')
-                        maze2[x, y] = '┌';
-                    if (maze[x, y] == 'X' & maze[x, y + 1] == ' ' & maze[x + 1, y] == ' ' & maze[x - 1, y] == 'X' & maze[x, y - 1] == 'X')
-                        maze2[x, y] = '┘';
-                    if (maze[x, y] == 'X' & maze[x, y + 1] == ' ' & maze[x + 1, y] == 'X' & maze[x - 1, y] == ' ' & maze[x, y - 1] == 'X')
-                        maze2[x, y] = '┐';
-                    if (maze[x, y] == 'X' & maze[x, y + 1] == 'X' & maze[x + 1, y] == ' ' & maze[x - 1, y] == 'X' & maze[x, y - 1] == ' ')
-                        maze2[x, y] = '└';
-                    if (maze[x, y] == 'X' & ((maze[x, y + 1] == ' ' & maze[x + 1, y] == ' ' & maze[x - 1, y] == 'X' & maze[x, y - 1] == ' ') | (maze[x, y + 1] == ' ' & maze[x + 1, y] == 'X' & maze[x - 1, y] == ' ' & maze[x, y - 1] == ' ')))
-                        maze2[x, y] = '│';
-                    if (maze[x, y] == 'X' & ((maze[x, y + 1] == 'X' & maze[x + 1, y] == ' ' & maze[x - 1, y] == ' ' & maze[x, y - 1] == ' ') | (maze[x, y + 1] == ' ' & maze[x + 1, y] == ' ' & maze[x - 1, y] == ' ' & maze[x, y - 1] == 'X')))
-                        maze2[x, y] = '─';
-                }
-            }
-        }
-
-        maze2[0, 0] = '┌';
-        maze2[mazeSize, mazeSize] = '┘';
-        maze2[0, mazeSize] = '┐';
-        maze2[mazeSize, 0] = '└';
-
-        for (int i = 0; i <= mazeSize; i++)
-        {
-            for (int j = 0; j <= mazeSize; j++)
-            {
-                Console.Write(maze2[i, j]);
-            }
-            Console.WriteLine();
-        }
     }
 
     public static void roomGen(int size)
@@ -221,18 +122,6 @@ static class Module1
             }
         }
         return false;
-    }
-
-    public static void displayMaze()
-    {
-        for (int i = 0; i <= mazeSize; i++)
-        {
-            for (int j = 0; j <= mazeSize; j++)
-            {
-                Console.Write(maze[i, j]);
-            }
-            Console.WriteLine();
-        }
     }
 
     public static void mazeInit()
