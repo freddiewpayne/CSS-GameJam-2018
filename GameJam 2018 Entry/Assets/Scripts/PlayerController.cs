@@ -55,11 +55,4 @@ public class PlayerController : MonoBehaviour {
         lifebar.value = hp;
 
 	}
-
-    // Collision with enemies 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.otherCollider.tag == "Enemy")
-            hp -= 10;
-    }
 }

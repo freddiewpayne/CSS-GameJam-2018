@@ -8,7 +8,13 @@ public class Shoot : MonoBehaviour {
     Transform player;
     float timer = 0;
     public float shoot_timer;
-    public Rigidbody2D projectile;
+    public GameObject projectile;
+    private Rigidbody2D projectileRB;
+
+    private void Start()
+    {
+        projectileRB = projectile.GetComponent<Rigidbody2D>();
+    }
 
     // Update is called once per frame
     void Update()
@@ -21,9 +27,10 @@ public class Shoot : MonoBehaviour {
         if (timer > shoot_timer)
         {
             timer = 0;
-            Rigidbody2D clone;
+            GameObject clone;
             clone = Instantiate(projectile, transform.position, transform.rotation);
-            clone.velocity = transform.TransformDirection(Vector3.up * 10);
+            projectileRB = clone.GetComponent<Rigidbody2D>();
+            projectileRB.velocity = transform.TransformDirection(Vector3.up * 10);
         }
 
     }
