@@ -25,9 +25,6 @@ public class PlayerController : MonoBehaviour {
         gameObject.transform.position += new Vector3( deltaX, deltaY );
 
         // Shield Movement with mouse  
-
-        // Reset shield rotation 
-
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector3 shieldDirection = gameObject.transform.position - mousePos;
 
@@ -38,6 +35,5 @@ public class PlayerController : MonoBehaviour {
  
         shield.transform.RotateAround(gameObject.transform.position, new Vector3(0, 0, 1), (shieldAngle - angleLastFrame) * rotSpeed );
         angleLastFrame = shieldAngle;
-
 	}
 }
