@@ -31,7 +31,7 @@ public class PlayerController : MonoBehaviour {
         // Shield rotation 
         float shieldAngle = (float) Math.Acos( shieldDirection.normalized.x );
         if (shieldDirection.y < 0)
-            shieldAngle = 2 * (float)Math.PI - shieldAngle;
+            shieldAngle = 2 * ( (float) Math.PI ) - shieldAngle;
  
         shield.transform.RotateAround(gameObject.transform.position, new Vector3(0, 0, 1), (shieldAngle - angleLastFrame) * rotSpeed );
         angleLastFrame = shieldAngle;
