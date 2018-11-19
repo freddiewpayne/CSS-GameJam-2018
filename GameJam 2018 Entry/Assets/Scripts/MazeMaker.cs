@@ -5,6 +5,8 @@ public class MazeMaker : MonoBehaviour {
 
     public GameObject wall;
     public GameObject shootingEnemy;
+    public GameObject torch; 
+
     public int enemyCount;
     private MazeGenerator mazeGenerator;
 
@@ -15,14 +17,14 @@ public class MazeMaker : MonoBehaviour {
         mazeGenerator = new MazeGenerator();
 
         // Need to turn string of hashes and spaces into a maze 
-        for ( int i = 0; i < MazeGenerator.mazeSize + 1; i ++ )
+        for (int i = 0; i <= MazeGenerator.mazeSize; i++ )
         {
-            for (int j = 0; j < MazeGenerator.mazeSize + 1; j++)
+            for (int j = MazeGenerator.mazeSize; j >= 0; j--)
             {
                 // Make a wall if we encounter a '#'
                 if ( MazeGenerator.maze[i, j] == '#')
                 {
-                    Vector3 wallPos = new Vector3( (float) ( i + 0.5 ), (float) ( j + 0.5 ) );
+                    Vector3 wallPos = new Vector3( (float) ( i + 0.5 ), (float) ( j + 0.37 ) );
                     Instantiate(wall, wallPos, wall.transform.rotation);
                 }
             }

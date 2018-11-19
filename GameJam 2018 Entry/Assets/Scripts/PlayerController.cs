@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour {
 
     public float speed;
     public float hp;
+    public float hp_init;
     public GameObject shield;
     public float shieldOffset;
     public float rotSpeed;
@@ -27,7 +28,8 @@ public class PlayerController : MonoBehaviour {
     private void Start()
     {
         angleLastFrame = 0;
-        hp = 10f;
+        hp = hp_init;
+        lifebar.maxValue = hp_init;
     }
 
     // Player and Shield Movement and update hp slider

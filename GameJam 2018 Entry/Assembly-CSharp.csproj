@@ -61,6 +61,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Animation\DefaultUI.cs" />
+    <Compile Include="Assets\Animation\EndGame.cs" />
     <Compile Include="Assets\FunkyCode\SmartLighting2D\Components\LightingCollider2D.cs" />
     <Compile Include="Assets\FunkyCode\SmartLighting2D\Components\LightingManager2D.cs" />
     <Compile Include="Assets\FunkyCode\SmartLighting2D\Components\LightingRoom2D.cs" />
