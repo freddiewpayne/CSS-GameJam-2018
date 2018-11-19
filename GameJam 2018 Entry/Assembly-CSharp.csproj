@@ -61,7 +61,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\RightState.cs" />
     <Compile Include="Assets\Scripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\Inventory\InventoryController.cs" />
     <Compile Include="Assets\Scripts\Inventory\Slot.cs" />
@@ -70,6 +69,7 @@
     <Compile Include="Assets\Scripts\PickupController.cs" />
     <Compile Include="Assets\Scripts\Player Animation\LeftState.cs" />
     <Compile Include="Assets\Scripts\Player Animation\RestState.cs" />
+    <Compile Include="Assets\Scripts\Player Animation\RightState.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
