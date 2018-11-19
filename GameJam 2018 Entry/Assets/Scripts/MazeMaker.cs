@@ -14,9 +14,9 @@ public class MazeMaker : MonoBehaviour {
         mazeGenerator = new MazeGenerator();
 
         // Need to turn string of hashes and spaces into a maze 
-        for ( int i = 0; i < MazeGenerator.mazeSize; i ++ )
+        for ( int i = 0; i < MazeGenerator.mazeSize + 1; i ++ )
         {
-            for (int j = 0; j < MazeGenerator.mazeSize; j++)
+            for (int j = 0; j < MazeGenerator.mazeSize + 1; j++)
             {
                 // Make a wall if we encounter a '#'
                 if ( MazeGenerator.maze[i, j] == '#')
