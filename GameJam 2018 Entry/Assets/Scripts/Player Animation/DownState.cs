@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RightState : StateMachineBehaviour {
+public class DownState : StateMachineBehaviour {
 
     //OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
 
-        if (!Input.GetKey("d"))
-            animator.SetBool("Right", false);
+        if (!Input.GetKey("s"))
+            animator.SetBool("Down", false);
 
     }
 }

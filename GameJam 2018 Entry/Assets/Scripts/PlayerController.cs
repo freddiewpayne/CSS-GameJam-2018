@@ -1,21 +1,36 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System;
 
 // Controls all player functions
 public class PlayerController : MonoBehaviour {
 
     public float speed;
+    public float hp;
     public GameObject shield;
     public float shieldOffset;
     public float rotSpeed;
     private float angleLastFrame;
 
+    public Slider lifebar;
+
+    public static PlayerController Instance;
+
+    private void Awake()
+    {
+        if (Instance == null)
+            Instance = this;
+        else if (Instance != this)
+            Destroy(gameObject);
+    }
+
     private void Start()
     {
         angleLastFrame = 0;
+        hp = 10f;
     }
 
-    // Player and Shield Movement
+    // Player and Shield Movement and update hp slider
     void FixedUpdate () {
 
         // Player WASD movement 
@@ -35,5 +50,16 @@ public class PlayerController : MonoBehaviour {
  
         shield.transform.RotateAround(gameObject.transform.position, new Vector3(0, 0, 1), (shieldAngle - angleLastFrame) * rotSpeed );
         angleLastFrame = shieldAngle;
+
+        // Update lifebar
+        lifebar.value = hp;
+
 	}
+
+    // Collision with enemies 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.otherCollider.tag == "Enemy")
+            hp -= 10;
+    }
 }
