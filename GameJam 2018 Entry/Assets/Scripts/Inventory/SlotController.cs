@@ -18,4 +18,20 @@ public class SlotController : MonoBehaviour {
         }
         catch (System.Exception) { image.gameObject.SetActive(false); };
     }
+
+    public void UseItem()
+    {
+        if (slot == null) return;
+
+        // Find the item type by its name 
+
+        if (slot.itemName == "Torch")
+        {
+            // Change light size and colour
+            PlayerController.Instance.gameObject.GetComponent<LightingSource2D>().lightSize = 3.2f;
+            PlayerController.Instance.gameObject.GetComponent<LightingSource2D>().color = new Color( 0.7f, 0.7f, 0.2f );
+        }
+
+        slot = null;
+    }
 }

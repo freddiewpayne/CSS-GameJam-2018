@@ -10,6 +10,16 @@ public class PlayerController : MonoBehaviour {
     public float rotSpeed;
     private float angleLastFrame;
 
+    public static PlayerController Instance;
+
+    private void Awake()
+    {
+        if (Instance == null)
+            Instance = this;
+        else if (Instance != this)
+            Destroy(gameObject);
+    }
+
     private void Start()
     {
         angleLastFrame = 0;

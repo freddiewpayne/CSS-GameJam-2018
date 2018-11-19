@@ -17,13 +17,13 @@ public class InventoryController : MonoBehaviour {
     }
 
     // Adding to inventory 
-    public void add( Sprite objectSprite )
+    public void add( Sprite objectSprite, string objectName )
     {
         for (int i = 0; i < 5; i++)
         {
             if (slots[i] == null)
             {
-                slots[i] = new Slot(objectSprite);
+                slots[i] = new Slot(objectSprite, objectName);
                 return;
             }
         }

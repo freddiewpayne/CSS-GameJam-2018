@@ -10,5 +10,11 @@ public class RestState : StateMachineBehaviour {
 
         else if (Input.GetKey("d"))
             animator.SetBool("Right", true);
-	}
+
+        else if (Input.GetKey("s"))
+            animator.SetBool("Down", true);
+
+        else if (Input.GetKey("w"))
+            animator.SetBool("Up", true);
+    }
 }
