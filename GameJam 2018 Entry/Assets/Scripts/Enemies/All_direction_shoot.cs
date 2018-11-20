@@ -7,7 +7,8 @@ public class All_direction_shoot : MonoBehaviour {
     Transform player;
     float timer = 0;
     public float shoot_timer;
-    public Rigidbody2D projectile;
+    public GameObject projectile;
+    private Rigidbody2D projectileRB;
     public int n_projectile = 10;
     public float bullets_speed = 2;
 
@@ -30,7 +31,6 @@ public class All_direction_shoot : MonoBehaviour {
 
     void shoot_all_directions()
     {
-        Rigidbody2D clone;
         float angle = 360 / n_projectile;
 
         for(int i = 0; i < n_projectile; i++)
@@ -38,8 +38,10 @@ public class All_direction_shoot : MonoBehaviour {
             Transform direction = transform;
             direction.rotation = Quaternion.AngleAxis(angle * i, Vector3.forward);
 
+            GameObject clone;
             clone = Instantiate(projectile, direction.position, direction.rotation);
-            clone.velocity = transform.TransformDirection(Vector3.up * bullets_speed);
+            projectileRB = clone.GetComponent<Rigidbody2D>();
+            projectileRB.velocity = transform.TransformDirection(Vector3.up * bullets_speed);
         }
 
 
