@@ -110,8 +110,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shoot_timer: 2
-  projectile: {fileID: 50661000350590832, guid: a30bb082a40398649be329a32f35edec,
-    type: 2}
+  projectile: {fileID: 1260951941089276, guid: a30bb082a40398649be329a32f35edec, type: 2}
   n_projectile: 10
   bullets_speed: 5
 --- !u!114 &114997036157374926
