@@ -78,7 +78,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 698b4af891298bf46bcc8f60c3669dc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  UISprite: {fileID: 21300014, guid: ac0b89f36a7b97643903fde72605557d, type: 3}
+  UISprite: {fileID: 21300002, guid: ac0b89f36a7b97643903fde72605557d, type: 3}
   objectName: Sword
 --- !u!212 &212241610588544256
 SpriteRenderer:

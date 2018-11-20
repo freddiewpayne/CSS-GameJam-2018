@@ -112,6 +112,7 @@
     <Compile Include="Assets\Scripts\Enemies\Shoot.cs" />
     <Compile Include="Assets\Scripts\Enemies\Shooting_enemy_move.cs" />
     <Compile Include="Assets\Scripts\Enemies\Sword_enemy_move.cs" />
+    <Compile Include="Assets\Scripts\GetKey.cs" />
     <Compile Include="Assets\Scripts\Inventory\InventoryController.cs" />
     <Compile Include="Assets\Scripts\Inventory\Slot.cs" />
     <Compile Include="Assets\Scripts\Inventory\SlotController.cs" />

@@ -2,7 +2,7 @@ fileFormatVersion: 2
 guid: 1f7d663585ad35e4f850906568b6f1ac
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Equipment (1)_0
+    21300000: Torch
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -107,7 +107,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Equipment (1)_0
+      name: Torch
       rect:
         serializedVersion: 2
         x: 1420
@@ -115,7 +115,7 @@ TextureImporter:
         width: 268
         height: 323
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

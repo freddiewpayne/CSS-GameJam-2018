@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.Animations;
 
 public class RestState : StateMachineBehaviour {
 
@@ -6,7 +7,9 @@ public class RestState : StateMachineBehaviour {
 	override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
 
         if (Input.GetKey("a"))
+        {
             animator.SetBool("Left", true);
+        }
 
         else if (Input.GetKey("d"))
             animator.SetBool("Right", true);
