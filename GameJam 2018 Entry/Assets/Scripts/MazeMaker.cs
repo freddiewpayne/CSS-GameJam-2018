@@ -44,7 +44,7 @@ public class MazeMaker : MonoBehaviour {
         // Need to add enemies into maze 
         for(int i = 0; i < enemyCount; i++)
         {
-            addObject(shootingEnemy);
+            addObject(allDirectionsEnemy);
             /*System.Random rand = new System.Random();
             int index = (int) rand.Next( 0, 3 );
 
@@ -67,8 +67,9 @@ public class MazeMaker : MonoBehaviour {
         roomIndex = (int)Math.Floor((double)UnityEngine.Random.Range(0, MazeGenerator.roomCoords.Capacity));
         x = (int)UnityEngine.Random.Range(0, MazeGenerator.roomCoords[roomIndex][2]);
         y = (int)UnityEngine.Random.Range(0, MazeGenerator.roomCoords[roomIndex][2]);
-        Instantiate(toAdd, new Vector3(MazeGenerator.roomCoords[roomIndex][0] + 0.5f + x,
-                                       MazeGenerator.roomCoords[roomIndex][1] + 0.5f + y), toAdd.transform.rotation);
+
+        GameObject newObj = Instantiate(toAdd, new Vector3(MazeGenerator.roomCoords[roomIndex][0] + 0.5f + x,
+                                                           MazeGenerator.roomCoords[roomIndex][1] + 0.5f + y  ), toAdd.transform.rotation);
     }
 
     private void Update()
