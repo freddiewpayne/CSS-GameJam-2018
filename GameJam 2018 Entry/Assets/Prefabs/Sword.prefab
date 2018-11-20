@@ -18,6 +18,11 @@ GameObject:
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
+  - component: {fileID: 4800785560049556}
+  - component: {fileID: 212241610588544256}
+  - component: {fileID: 95488938339016132}
+=======
   - component: {fileID: 4105152024963352}
   - component: {fileID: 212304442665769840}
   - component: {fileID: 114379369182717730}
@@ -25,6 +30,7 @@ GameObject:
   - component: {fileID: 95354157576518344}
   - component: {fileID: 70609264904864052}
   - component: {fileID: 114835023063781616}
+>>>>>>> 4de46404db3701b19de43f56a772f347ce07d033
   m_Layer: 0
   m_Name: Sword
   m_TagString: Untagged
@@ -39,8 +45,13 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1586819491148264}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+<<<<<<< HEAD
+  m_LocalPosition: {x: 2.41, y: 1.58, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+=======
   m_LocalPosition: {x: 1.813, y: 1.675, z: 0.1364109}
   m_LocalScale: {x: 0.15, y: 0.15, z: 1}
+>>>>>>> 4de46404db3701b19de43f56a772f347ce07d033
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -78,6 +89,9 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+<<<<<<< HEAD
+--- !u!212 &212241610588544256
+=======
 --- !u!114 &114379369182717730
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -115,6 +129,7 @@ MonoBehaviour:
   objectName: Sword
   picked: 0
 --- !u!212 &212304442665769840
+>>>>>>> 4de46404db3701b19de43f56a772f347ce07d033
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}

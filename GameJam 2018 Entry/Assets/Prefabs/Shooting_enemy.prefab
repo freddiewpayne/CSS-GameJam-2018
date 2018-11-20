@@ -123,7 +123,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shoot_timer: 2
-  projectile: {fileID: 1927756287457374, guid: 5f9248e8c44d23c4ebd1ece1b4f223b7, type: 2}
+  projectile: {fileID: 1927756287457374, guid: 0cd785a479d2d5d4d8adb547af077ac4, type: 2}
 --- !u!212 &212264105601150976
 SpriteRenderer:
   m_ObjectHideFlags: 1

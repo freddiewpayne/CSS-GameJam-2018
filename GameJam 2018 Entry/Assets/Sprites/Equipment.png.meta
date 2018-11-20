@@ -9,6 +9,7 @@ TextureImporter:
     21300008: Bullet
     21300010: Face_shield
     21300012: Shield
+    21300014: SwordIcon
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -52,7 +53,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 700
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -87,6 +88,28 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -95,11 +118,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 370
-        y: 2420
+        y: 2014
         width: 250
-        height: 441
+        height: 847
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -107,7 +130,7 @@ TextureImporter:
       bones: []
       spriteID: d73e0d1ef0d6fb542a9dc30325279d34
       vertices: []
-      indices:
+      indices: 
       edges: []
       weights: []
     - serializedVersion: 2
@@ -119,7 +142,7 @@ TextureImporter:
         width: 158
         height: 444
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -127,7 +150,7 @@ TextureImporter:
       bones: []
       spriteID: e08be07dbaf0c7848beafcd0a15dbdd6
       vertices: []
-      indices:
+      indices: 
       edges: []
       weights: []
     - serializedVersion: 2
@@ -139,7 +162,7 @@ TextureImporter:
         width: 324
         height: 233
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -147,7 +170,7 @@ TextureImporter:
       bones: []
       spriteID: 5cc0793600090c54e9f0aa9d8d6e92eb
       vertices: []
-      indices:
+      indices: 
       edges: []
       weights: []
     - serializedVersion: 2
@@ -159,7 +182,7 @@ TextureImporter:
         width: 129
         height: 347
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -167,7 +190,7 @@ TextureImporter:
       bones: []
       spriteID: 9642a811a9980da46a27058e128ae29b
       vertices: []
-      indices:
+      indices: 
       edges: []
       weights: []
     - serializedVersion: 2
@@ -179,7 +202,7 @@ TextureImporter:
         width: 178
         height: 131
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -187,7 +210,7 @@ TextureImporter:
       bones: []
       spriteID: bda4a279f44d54f4aa98fdf309f01f7c
       vertices: []
-      indices:
+      indices: 
       edges: []
       weights: []
     - serializedVersion: 2
@@ -199,7 +222,7 @@ TextureImporter:
         width: 620
         height: 667
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -207,7 +230,7 @@ TextureImporter:
       bones: []
       spriteID: 16341f6819290084c944dc4908149bdc
       vertices: []
-      indices:
+      indices: 
       edges: []
       weights: []
     - serializedVersion: 2
@@ -219,7 +242,7 @@ TextureImporter:
         width: 610
         height: 110
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -227,7 +250,27 @@ TextureImporter:
       bones: []
       spriteID: 4203d1adc7baf4047be27371090074c9
       vertices: []
-      indices:
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SwordIcon
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 2407
+        width: 254
+        height: 460
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 6, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b693d8b845ad304281416a030887eb9
+      vertices: []
+      indices: 
       edges: []
       weights: []
     outline: []
@@ -235,12 +278,12 @@ TextureImporter:
     bones: []
     spriteID: f3e8d4295edaf6c4780fd928451be913
     vertices: []
-    indices:
+    indices: 
     edges: []
     weights: []
-  spritePackingTag:
+  spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
-  userData:
-  assetBundleName:
-  assetBundleVariant:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
