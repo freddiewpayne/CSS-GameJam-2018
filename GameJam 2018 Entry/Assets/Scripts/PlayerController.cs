@@ -7,7 +7,6 @@ public class PlayerController : MonoBehaviour {
 
     public float speed;
     public float hp;
-    public float hp_init;
     public GameObject shield;
     public float shieldOffset;
     public float rotSpeed;
@@ -23,13 +22,12 @@ public class PlayerController : MonoBehaviour {
             Instance = this;
         else if (Instance != this)
             Destroy(gameObject);
-    }
+     }
 
     private void Start()
     {
         angleLastFrame = 0;
-        hp = hp_init;
-        lifebar.maxValue = hp_init;
+        hp = 10f;
     }
 
     // Player and Shield Movement and update hp slider
@@ -41,7 +39,19 @@ public class PlayerController : MonoBehaviour {
 
         gameObject.transform.position += new Vector3( deltaX, deltaY );
 
-        // Shield Movement with mouse  
+
+        Vector3 mousePos = Input.mousePosition;
+        mousePos.z = 10;
+
+        Vector3 objectPos = Camera.main.WorldToScreenPoint(transform.position);
+        mousePos.x = mousePos.x - objectPos.x;
+        mousePos.y = mousePos.y - objectPos.y;
+
+        float angle = Mathf.Atan2(mousePos.y, mousePos.x) * Mathf.Rad2Deg;
+        shield.transform.RotateAround(gameObject.transform.position, new Vector3(0, 0, 1), angle - angleLastFrame);
+        angleLastFrame = angle;
+
+        /*/ Shield Movement with mouse  
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector3 shieldDirection = gameObject.transform.position - mousePos;
 
@@ -51,7 +61,7 @@ public class PlayerController : MonoBehaviour {
             shieldAngle = 2 * ( (float) Math.PI ) - shieldAngle;
  
         shield.transform.RotateAround(gameObject.transform.position, new Vector3(0, 0, 1), (shieldAngle - angleLastFrame) * rotSpeed );
-        angleLastFrame = shieldAngle;
+        angleLastFrame = shieldAngle;*/
 
         // Update lifebar
         lifebar.value = hp;
