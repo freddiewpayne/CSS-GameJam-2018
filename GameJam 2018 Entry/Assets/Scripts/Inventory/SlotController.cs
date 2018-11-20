@@ -30,8 +30,15 @@ public class SlotController : MonoBehaviour {
             // Change light size and colour
             PlayerController.Instance.gameObject.GetComponent<LightingSource2D>().lightSize = 3.2f;
             PlayerController.Instance.gameObject.GetComponent<LightingSource2D>().color = new Color( 0.7f, 0.7f, 0.2f );
+            PlayerController.Instance.sword.SetActive(false);
         }
 
-        slot = null;
+        else if ( slot.itemName == "Sword" )
+        {
+            PlayerController.Instance.sword.SetActive(true);
+            // Reset light if needed 
+            PlayerController.Instance.gameObject.GetComponent<LightingSource2D>().lightSize = 1.4f;
+            PlayerController.Instance.gameObject.GetComponent<LightingSource2D>().color = new Color(0.5f, 0.5f, 0.5f);
+        }         
     }
 }

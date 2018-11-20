@@ -63,6 +63,7 @@
   <ItemGroup>
     <Compile Include="Assets\Animation\DefaultUI.cs" />
     <Compile Include="Assets\Animation\EndGame.cs" />
+    <Compile Include="Assets\Animation\Sword\SwingSword.cs" />
     <Compile Include="Assets\FunkyCode\SmartLighting2D\Components\LightingCollider2D.cs" />
     <Compile Include="Assets\FunkyCode\SmartLighting2D\Components\LightingManager2D.cs" />
     <Compile Include="Assets\FunkyCode\SmartLighting2D\Components\LightingRoom2D.cs" />
@@ -123,6 +124,7 @@
     <Compile Include="Assets\Scripts\Player Animation\RightState.cs" />
     <Compile Include="Assets\Scripts\Player Animation\UpState.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\SwordController.cs" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
