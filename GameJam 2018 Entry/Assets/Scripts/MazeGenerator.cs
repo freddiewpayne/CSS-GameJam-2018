@@ -55,14 +55,16 @@ class MazeGenerator
         int rand;
         int placeX;
         int placeY;
+        int n = 0;
         System.Random ran = new Random();
         do
         {
             rand = System.Convert.ToInt32(Math.Floor((double)(size * (ran.Next(0, 100) / (double)100)))) * 2 + 3;
             placeX = (System.Convert.ToInt32(Math.Floor((double)((mazeSize - rand - 1) * (ran.Next(0,100) / (double)100)))) / 2) * 2 + 3;
             placeY = (System.Convert.ToInt32(Math.Floor((double)((mazeSize - rand - 1) * (ran.Next(0, 100) / (double) 100)))) / 2) * 2 + 3;
+            n++;
         }
-        while (colliding(placeX, placeY, rand));
+        while (colliding(placeX, placeY, rand) && n < 2000);
 
         int[] temp = new int[3] { placeX, placeY, rand };
         roomCoords.Add( temp );
